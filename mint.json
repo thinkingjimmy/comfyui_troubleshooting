@@ -1,0 +1,124 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "ComfyUI Troubleshooting Guide",
+  "logo": {
+    "dark": "/images/logo/dark.svg",
+    "light": "/images/logo/light.svg"
+  },
+  "favicon": "/images/favicon.svg",
+  "colors": {
+    "primary": "#09090b",
+    "light": "#FAFAFA",
+    "dark": "#09090b"
+  },
+  "theme": "prism",
+  "topbarCtaButton": {
+    "name": "Try ComfyUI",
+    "url": "https://comflowy.com"
+  },
+  "primaryTab": {
+    "name": "Home"
+  },
+  "tabs": [
+    {
+      "name": "Change Log",
+      "version": "English",
+      "url": "en/changelogs"
+    },
+    {
+      "name": "更新日志",
+      "version": "简体中文",
+      "url": "zh-CN/changelogs"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Author's Twitter",
+      "icon": "x-twitter",
+      "url": "https://twitter.com/hellojimmywong",
+      "version": "English"
+    },
+    {
+      "name": "Author's YouTube",
+      "icon": "youtube",
+      "url": "https://www.youtube.com/@HeyJimmyWong",
+      "version": "English"
+    },
+    {
+      "name": "Community",
+      "icon": "comments",
+      "url": "https://github.com/thinkingjimmy/comfyui_troubleshooting/discussions",
+      "version": "English"
+    },
+    {
+      "name": "作者的小红书",
+      "icon": "book",
+      "url": "https://www.xiaohongshu.com/user/profile/6073d38d00000000010068a6",
+      "version": "简体中文"
+    },
+    {
+      "name": "作者的 B 站",
+      "icon": "youtube",
+      "url": "https://space.bilibili.com/1409205119",
+      "version": "简体中文"
+    },
+    {
+      "name": "用户社区",
+      "icon": "comments",
+      "url": "https://github.com/thinkingjimmy/comfyui_troubleshooting/discussions",
+      "version": "简体中文"
+    },
+    {
+      "name": "ComfyUI 101",
+      "icon": "book-open-cover",
+      "url": "https://comflowy.com/tutorial/docs"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Welcome",
+      "version": "English",
+      "pages": [
+        "en/quickstart",
+        "en/community"
+      ]
+    },
+    {
+      "group": "欢迎",
+      "version": "简体中文",
+      "pages": [
+        "zh-CN/quickstart",
+        "zh-CN/community"
+      ]
+    },
+    {
+      "group": "Changelog",
+      "version": "English",
+      "pages": [
+        "en/changelogs/updates"
+      ]
+    },
+    {
+      "group": "更新日志",
+      "version": "简体中文",
+      "pages": [
+        "zh-CN/changelogs/updates"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "name": "English",
+      "locale": "en",
+      "default": true
+    },
+    {
+      "name": "简体中文",
+      "locale": "cn"
+    }
+  ],
+  "footerSocials": {
+    "x": "https://twitter.com/hellojimmywong",
+    "github": "https://github.com/thinkingjimmy/comfyui_troubleshooting"
+  }
+}
