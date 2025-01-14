@@ -1,0 +1,41 @@
+---
+title: Value not in list
+description: ''
+icon: 'file-circle-xmark'
+"og:image": ''
+"twitter:image": ''
+---
+
+## Error
+
+This is a common issue that most new ComfyUI users encounter. After installing ComfyUI and running it for the first time, you'll see a "Value not in list" error. The error message looks like this:
+
+<Frame>
+  <img src="/images/intro/001.png" />
+</Frame>
+
+## Solution
+
+**When you see a "Value not in list" error, it means that the file required by the node's dropdown menu doesn't exist. You need to download the corresponding model file and place it in the model folder required by that node.**
+
+For example, the Checkpoint node reads from the checkpoints folder inside the models directory. You need to download the model and place it in this checkpoints folder before you can run it.
+
+At this stage, users often encounter two common issues.
+
+**First, after downloading the model and placing it in the folder, the node's dropdown menu doesn't show the file.**
+
+For instance, if I copy a Diffusion model to the checkpoint folder, then go back to ComfyUI and click on the Checkpoint dropdown menu, you won't see the file.
+
+In this case, you need to refresh ComfyUI, and then you'll see the model in the dropdown menu.
+
+**Second, I've downloaded the model and placed it in the correct folder, refreshed ComfyUI, but still get the "Value not in list" error when running.**
+
+Let me demonstrate what's happening. I copied the v1-5-pruned file to the checkpoints folder, refreshed ComfyUI, clicked run, and still got the same error.
+
+Why is this happening? It's because your model filename doesn't match the filename that the workflow is trying to load. If you look carefully at the model filename in the workflow, you'll notice it's a safetensors file (shown in 1), while the file in my folder is a ckpt file (shown in 2). So ComfyUI's error is correct - the safetensors file indeed doesn't exist. This issue commonly occurs when using someone else's workflow. When you import another person's workflow and download the models from their provided links, you might encounter this problem.
+
+<Frame>
+  <img src="/images/basics/value-not-in-list/001.png" />
+</Frame>
+
+This happens because workflow creators often modify model names for better organization. The best solution is to manually select your downloaded model after you've placed it in the folder, and then you should be able to run the workflow successfully.

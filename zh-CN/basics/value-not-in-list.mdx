@@ -1,0 +1,41 @@
+---
+title: Value not in list
+description: ''
+icon: 'file-circle-xmark'
+"og:image": ''
+"twitter:image": ''
+---
+
+## 报错
+
+这是绝大多数刚用 ComfyUI 的朋友会遇到的问题。装好 ComfyUI 后，打开 ComfyUI直接运行。然后就出现提示【Value not in list】。报错信息如下：
+
+<Frame>
+  <img src="/images/intro/001.png" />
+</Frame>
+
+## 解决方案
+
+**如果你看到【Value not in list】这样的报错，这就意味着这个节点的下拉选项所加载的文件不存在。你需要去下载对应的模型文件，然后放到这个节点所要求的模型文件夹里。**
+
+比如 Checkpoint 节点，就是读取的 models 里的 checkpoints 文件夹。你需要下载好模型后，将模型文件放到这个 checkpoints 文件夹中才能运行。
+
+在这个环节，各位还很容易遇到两个问题。
+
+**第一个是下载好模型后，将模型放到文件夹里了，但这个节点的下拉框不显示出来。**
+
+比如我将 Diffusion 的一个模型，复制到 checkpoint 文件夹里。然后回到 ComfyUI，点击 Checkpoint 的下拉框，你会发现并没有这个文件。
+
+此时你就需要刷新下 ComfyUI，就能看到下拉里会有对应的模型。
+
+**第二个，我已经将模型下载好了并放到对应文件夹了，也刷新了，但运行后依然显示【Value not in list】。**
+
+我来演示下是这么回事。我将这个 v1-5-pruned 文件复制到 checkpoints 文件夹里，然后刷新下 ComfyUI，然后点击运行，还是弹出了相同的报错。
+
+这是为什么？这是因为你的模型文件名称，与工作流加载的模型名称不一致导致的。如果你细看这个工作流加载的模型文件名，你会发现这是个 safetensors 的文件（图中 1），而我的文件夹里的文件是个 ckpt 文件（图中2 ）。所以 ComfyUI 的报错的确是对的。的确不存在 safetensors 的文件。这个问题，多见于使用别人的工作流。各位导入别人的工作流，按照工作流作者提供的模型下载地址，将模型下载好后，运行工作流，就很有可能会遇到这个问题。
+
+<Frame>
+  <img src="/images/basics/value-not-in-list/001.png" />
+</Frame>
+
+因为工作流的作者为了更好的辨别各个模型，会对模型的名称进行调整。那最好的方法是，当你下载好模型后，手动选择一下你下载好的模型，然后就能顺利运行了。

@@ -80,7 +80,7 @@
       "version": "English",
       "pages": [
         "en/quickstart",
-        "en/community"
+        "en/faq"
       ]
     },
     {
@@ -88,7 +88,21 @@
       "version": "简体中文",
       "pages": [
         "zh-CN/quickstart",
-        "zh-CN/community"
+        "zh-CN/faq"
+      ]
+    },
+    {
+      "group": "Basics",
+      "version": "English",
+      "pages": [
+        "en/basics/value-not-in-list"
+      ]
+    },
+    {
+      "group": "基础",
+      "version": "简体中文",
+      "pages": [
+        "zh-CN/basics/value-not-in-list"
       ]
     },
     {
@@ -120,5 +134,17 @@
   "footerSocials": {
     "x": "https://twitter.com/hellojimmywong",
     "github": "https://github.com/thinkingjimmy/comfyui_troubleshooting"
+  },
+  "metadata": {
+    "og:site_name": "ComfyUI Troubleshooting Guide",
+    "og:url": "https://comfyfaq.com",
+    "twitter:url": "https://twitter.com/hellojimmywong",
+    "twitter:site": "@hellojimmywong",
+    "twitter:creator": "@hellojimmywong"
+  },
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-SP9MZCP3QV"
+    }
   }
 }
